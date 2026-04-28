@@ -1,1 +1,2 @@
-/* /index.html 200
+# Next.js on Netlify is handled by @netlify/plugin-nextjs — no manual redirects needed.
+# This file is intentionally left minimal.

@@ -26,10 +26,16 @@ cors_origins = [
     if origin.strip()
 ]
 
+# Allows localhost (dev) + any Netlify subdomain (production)
+_CORS_ORIGIN_REGEX = (
+    r"https?://(localhost|127\.0\.0\.1)(:\d+)?"
+    r"|https://[a-z0-9-]+\.netlify\.app"
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=cors_origins,
-    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_origin_regex=_CORS_ORIGIN_REGEX,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

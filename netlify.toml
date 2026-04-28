@@ -1,0 +1,13 @@
+[build]
+  base    = "frontend"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Redirect all API calls to the Render backend (set NEXT_PUBLIC_API_BASE in Netlify env vars)
+# No manual redirects needed – Next.js rewrites handle /api/backend/* → backend
