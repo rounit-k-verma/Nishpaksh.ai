@@ -1,5 +1,5 @@
 # Nishpaksh AI
-
+https://nishpakshai.netlify.app/
 Nishpaksh AI is a full-stack fairness auditing platform for hiring, scholarship, and loan decision datasets.
 
 ## Tech stack
